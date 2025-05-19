@@ -1,0 +1,34 @@
+1. Nomeclatura dos Requisitos
+
+Todos os requisitos do projeto devem seguir a seguinte padronização:
+
+    RF-XX – Requisito Funcional (por exemplo, RF-01, RF-02, etc.)
+
+    RNF-XX – Requisito Não Funcional (por exemplo, RNF-01, RNF-02, etc.)
+
+2. Regras de Especificação de Requisitos
+
+As seguintes regras serão aplicadas a todo o processo de escrita e validação de requisitos, conforme orientações do Capítulo 1 do livro Engenharia de Software, de Rogério Magela:
+Regra 1 – Clareza e Precisão
+
+Cada requisito deve ser escrito de forma inequívoca, sem ambiguidade. Termos vagos como “rápido”, “eficiente” ou “bom desempenho” devem ser evitados sem critérios objetivos.
+
+    Exemplo bom: "O sistema deve exibir a tela inicial em até 3 segundos após o login."
+    Exemplo ruim: "O sistema deve ser rápido ao iniciar."
+
+Regra 2 – Verificabilidade
+
+Todo requisito deve ser verificável, ou seja, deve ser possível comprovar por meio de teste, inspeção ou análise que o requisito foi atendido.
+
+    Exemplo bom: "O sistema deve armazenar até 100 mil registros de usuários simultâneos."
+    Exemplo ruim: "O sistema deve ser escalável."
+
+Regra 3 – Consistência e Não Contradição
+
+Requisitos não devem entrar em conflito entre si. O documento de requisitos será constantemente analisado para garantir que não há contradições funcionais ou não funcionais.
+
+    Exemplo de contradição:
+
+        RF-10: "O sistema deve aceitar login com CPF."
+
+        RF-15: "O sistema não deve solicitar CPF em nenhuma etapa."
