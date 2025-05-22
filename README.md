@@ -7,6 +7,9 @@ Para isso, foi resolvido criar um sistema web que permitiria a ela expandir suas
 
 ## Tecnologias Utilizadas
 **Frontend:** HTML, CSS, Javascript, React
+
 **Backend:** Java, Spring Boot
+
 **Banco de Dados:** Postgres
+
 **IDE:** VSCode
