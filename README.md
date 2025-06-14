@@ -21,35 +21,22 @@ Para isso, foi resolvido criar um sistema web que permitiria a ela expandir suas
 
 ## Estrutura do Diretório
 
-### Documentação
-
 ```
 Lumiere-dOr/
-|-- Documentacao/
-|   |-- PadroesAdotados/         #Pasta contendo regras de verificação
-|   |-- Requisitos/         #Diagrama de Casos de Uso e Documento de Requisitos
-```
-
-### Front-end
-
-```
-Lumiere-dOr/
-|-- CodigoFonte/
+|-- Documentacao/           # Pasta contendo todas as documentações
+|   |-- PadroesAdotados/    # Pasta contendo regras de verificação
+|   |-- Requisitos/         # Diagrama de Casos de Uso e Documento de Requisitos
+|-- CodigoFonte/            # Código fonte do projeto
 |   |-- front/
 |   |   |-- public/         # Imagens e arquivos estáticos
 |   |   |-- src/
 |   |   |   |-- assets/     # Ícones, fontes, imagens internas, etc.
 |   |   |   |-- components/ # Componentes React reutilizáveis
-|   |   |-- README.md       # Explicações sobre o front-end 
-```
-
-### Back-end
-
-```
-Lumiere-dOr/
-|-- CodigoFonte/
+|   |   |-- README.md       # Explicações sobre o front-end
 |   |-- back/
 |   |   |-- A DEFINIR
+|-- README.md               # Visão geral sobre o projeto
+|-- CONTRIBUTING.md         # Regras e padrões do uso do git
 ```
 
 ## Instalação
