@@ -28,7 +28,7 @@ Use um título claro e objetivo, seguindo o padrão dos commits:
 - `fix: corrigir erro ao calcular total do carrinho`
 - `docs: atualizar documentação do componente Header`
 
-### 📝 Descrição
+### Descrição
 Preencha a descrição com:
 - O que foi feito
 - Quais arquivos foram alterados
