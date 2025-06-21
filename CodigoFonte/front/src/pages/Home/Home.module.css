@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgRelogio{
+    width: 50rem;
+    border-radius: 20px;
+}
+
+.relogios{
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.paragrafoSecao{
+    color: #111111;
+    font-family: "Lora", serif;
+}
+
+.botaoRedirecionar {
+    position: relative;
+    display: inline-block;
+    color: #712F26;
+    font-size: 1.25rem;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    transition: color 0.5s ease-out;
+    margin: 1rem 0;
+}
+
+.botaoRedirecionar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* ou -3px se quiser mais afastado */
+    width: 0%;
+    height: 2px;
+    background-color: #712F26;
+    transition: width 0.5s ease-out;
+}
+
+.botaoRedirecionar:hover::after {
+    width: 100%;
+}
+
+.tituloSecao{
+    text-transform: uppercase;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 500;
+    color: #111111;
+    margin: 1rem 0;
+}
+
+.imgAliancaContainer{
+    width: 24rem;
+    height: 22rem;
+    overflow: hidden;
+}
+
+.imgAlianca{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem preencher e cortar o excesso */
+    object-position: center;
+    border-radius: 20px; 
+}
+
+.aliancas{
+    display: flex;
+    width: 80%;
+    margin: 0 auto ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textContent{
+    text-align: center;
+    width: 60%;
+}
+
+.imgCorrenteContainer{
+    width: 24rem;
+    height: 22rem;
+    overflow: hidden;
+}
+
+.imgCorrente{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem preencher e cortar o excesso */
+    object-position: center;
+    border-radius: 20px; 
+}
+
+.correntes{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: 2rem auto ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textContentCorrentes{
+    text-align: center;
+    width: 60%;
+}
