@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { LuUser } from "react-icons/lu";
 import { FiShoppingBag } from "react-icons/fi";
 
-function Home() {
+function Header() {
   return (
     <div className={styles.container}>
         <div className={styles.containerTitleIcon}>
@@ -27,4 +27,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Header

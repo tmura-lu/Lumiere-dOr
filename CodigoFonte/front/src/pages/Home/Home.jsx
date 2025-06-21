@@ -2,6 +2,8 @@ import styles from './Home.module.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 import relogio from '../../assets/relogio1.webp'
 import alianca from '../../assets/Aneis-Header_1920x800.webp'
@@ -12,95 +14,141 @@ import pulseiras from '../../assets/Pulseiras-Header_1920x800-1.webp'
 import BotaoCarrinho from '../../components/BotaoCarrinho/BotaoCarrinho'
 
 function Home() {
-  return (
-    <div className={styles.container}>
-        <Header/>
+    const [showFirstSection, setShowFirstSection] = useState(false)
 
-        <div className={styles.mainContent}>
-            <div className={styles.relogios}>
-                <img src={relogio} alt="Relógio modelo" className={styles.imgRelogio}/>
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+        setShowFirstSection(true)
+        }, 100) // espera um pequeno tempo para evitar "pulo visual"
+        return () => clearTimeout(timeout)
+    }, [])
 
-                <h1 className={styles.tituloSecao}>Relógios</h1>
+    return (
+        <div className={styles.container}>
+            <Header/>
 
-                <p className={styles.paragrafoSecao}>Precisão com personalidade. Relógios que transformam o tempo em elegância.</p>
+            <div className={styles.mainContent}>
+                <motion.div
+                style={{minHeight: "20rem"}}
+                className={styles.relogios}
+                initial={{ opacity: 0 }}
+                animate={showFirstSection ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                >
+                    <img src={relogio} alt="Relógio modelo" className={styles.imgRelogio}/>
 
-                <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
-            </div>
-            
-            <div className={styles.aliancas}>
-                <div className={styles.imgAliancaContainer}>
-                    <img src={alianca} alt="Aliança modelo" className={styles.imgAlianca}/>    
-                </div>
+                    <h1 className={styles.tituloSecao}>Relógios</h1>
+
+                    <p className={styles.paragrafoSecao}>Precisão com personalidade. Relógios que transformam o tempo em elegância.</p>
+
+                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
+                </motion.div>
                 
-                <div className={styles.textContent}>
-                    <h1 className={styles.tituloSecao}>Alianças</h1>
+                <motion.div 
+                className={styles.aliancas}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1   , ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.5 }}
+                >
+                    <div className={styles.imgAliancaContainer}>
+                        <img src={alianca} alt="Aliança modelo" className={styles.imgAlianca}/>    
+                    </div>
+                    
+                    <div className={styles.textContent}>
+                        <h1 className={styles.tituloSecao}>Alianças</h1>
 
-                    <p className={styles.paragrafoSecao}>Promessas eternas com design atemporal. Para quem busca mais que um símbolo, uma obra de arte.</p>
+                        <p className={styles.paragrafoSecao}>Promessas eternas com design atemporal. Para quem busca mais que um símbolo, uma obra de arte.</p>
 
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
-                </div>
+                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                    </div>
 
+                </motion.div>
+
+                <motion.div 
+                style={{minHeight: '25rem'}}
+                className={styles.correntes}
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.5 }}
+                >
+                    <div className={styles.imgCorrenteContainer}>
+                        <img src={corrente} alt="Aliança modelo" className={styles.imgCorrente}/>    
+                    </div>
+                    
+                    <div className={styles.textContentCorrentes}>
+                        <h1 className={styles.tituloSecao}>Correntes</h1>
+
+                        <p className={styles.paragrafoSecao}>Estilo que conecta histórias. Correntes marcantes para quem não passa desapercebido.</p>
+
+                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                    </div>
+                </motion.div>
+
+                <motion.div 
+                className={styles.relogios}
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.5 }}
+                >
+                    <img src={oculos} alt="Relógio óculos" className={styles.imgRelogio}/>
+
+                    <h1 className={styles.tituloSecao}>Óculos</h1>
+
+                    <p className={styles.paragrafoSecao}>Seu olhar, nossa moldura. Óculos que refletem personalidade, confiança e visão de futuro</p>
+
+                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
+                </motion.div>
+
+                <motion.div 
+                className={styles.aliancas}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1   , ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.5 }}
+                >
+                    <div className={styles.imgAliancaContainer}>
+                        <img src={brincos} alt="Aliança modelo" className={styles.imgAlianca}/>    
+                    </div>
+                    
+                    <div className={styles.textContent}>
+                        <h1 className={styles.tituloSecao}>Brincos</h1>
+
+                        <p className={styles.paragrafoSecao}>Pequenos toques, grandes impressões. Brincos que iluminam cada expressão com charme e sofisticação.</p>
+
+                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                    </div>
+
+                </motion.div>
+
+                <motion.div 
+                className={styles.correntes}
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.5 }}
+                >
+                    <div className={styles.imgCorrenteContainer}>
+                        <img src={pulseiras} alt="Pulseira modelo" className={styles.imgCorrente}/>    
+                    </div>
+                    
+                    <div className={styles.textContentCorrentes}>
+                        <h1 className={styles.tituloSecao}>Pulseiras</h1>
+
+                        <p className={styles.paragrafoSecao}>Detalhes que revelam quem você é. Pulseiras feitas para complementar o seu estilo com leveza e atitude.</p>
+
+                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                    </div>
+                </motion.div>
             </div>
 
-            <div className={styles.correntes}>
-                <div className={styles.imgCorrenteContainer}>
-                    <img src={corrente} alt="Aliança modelo" className={styles.imgCorrente}/>    
-                </div>
-                
-                <div className={styles.textContentCorrentes}>
-                    <h1 className={styles.tituloSecao}>Correntes</h1>
+            <BotaoCarrinho/>
 
-                    <p className={styles.paragrafoSecao}>Estilo que conecta histórias. Correntes marcantes para quem não passa desapercebido.</p>
-
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
-                </div>
-            </div>
-
-            <div className={styles.relogios}>
-                <img src={oculos} alt="Relógio óculos" className={styles.imgRelogio}/>
-
-                <h1 className={styles.tituloSecao}>Óculos</h1>
-
-                <p className={styles.paragrafoSecao}>Seu olhar, nossa moldura. Óculos que refletem personalidade, confiança e visão de futuro</p>
-
-                <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
-            </div>
-
-            <div className={styles.aliancas}>
-                <div className={styles.imgAliancaContainer}>
-                    <img src={brincos} alt="Aliança modelo" className={styles.imgAlianca}/>    
-                </div>
-                
-                <div className={styles.textContent}>
-                    <h1 className={styles.tituloSecao}>Brincos</h1>
-
-                    <p className={styles.paragrafoSecao}>Pequenos toques, grandes impressões. Brincos que iluminam cada expressão com charme e sofisticação.</p>
-
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
-                </div>
-
-            </div>
-
-            <div className={styles.correntes}>
-                <div className={styles.imgCorrenteContainer}>
-                    <img src={pulseiras} alt="Pulseira modelo" className={styles.imgCorrente}/>    
-                </div>
-                
-                <div className={styles.textContentCorrentes}>
-                    <h1 className={styles.tituloSecao}>Pulseiras</h1>
-
-                    <p className={styles.paragrafoSecao}>Detalhes que revelam quem você é. Pulseiras feitas para complementar o seu estilo com leveza e atitude.</p>
-
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
-                </div>
-            </div>
+            <Footer/>
         </div>
-
-        <BotaoCarrinho/>
-
-         <Footer/>
-    </div>
-  )
+    )
 }
 
 export default Home
