@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem 0
+}
+
+.imgProduto{
+    width: 25rem;
+    height: 25rem;
+    margin-left: 2rem;
+    border-radius: 20px;
+}
+
+.textContent{
+    margin: 0 2rem;
+    width: 40rem;
+}
+
+.titulo{
+    font-family: "Kaisei Decol", serif;
+    text-transform: uppercase;
+    text-align: left;
+    color: #111111;
+}
+
+.descricao{
+    font-size: 1rem;
+    color: black;
+    font-family: "Lora", serif;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.valor{
+    font-size: 1rem;
+    color: #111111;
+    font-family: "Lora", serif;
+    margin-bottom: 1rem; 
+    font-weight: 500;
+    font-size: 2.25rem;
+}
+
+.botao{
+    display: block;
+    width: 100%;
+    background-color: #111111;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Lora", serif;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in;
+}
+
+.botao:hover{
+    background-color: black;
+}
