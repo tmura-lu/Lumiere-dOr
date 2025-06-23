@@ -10,4 +10,9 @@
     position:fixed;
     bottom: 2rem;
     left: 2rem;
+    transition: background-color 0.3s ease-in;
+}
+
+.icon:hover{
+    background-color: #470000;
 }

@@ -11,6 +11,7 @@ Para isso, foi resolvido criar um sistema web que permitiria a ela expandir suas
 - **Node** - v20.5.1 ou 20.X
 - **React** -  v18.3.1
 - **Vite** - v5.1.0
+- **MUI Components** - Biblioteca de Componentes
 
 ### Back-End
 - **PostgreSQL** - vX.X.X

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    font-family: "Kaisei Decol", serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #111111;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    margin-top: 1.2rem;
+}
+
+.botao{
+    margin-top: 1.2rem;
+    background-color: #750000;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in;
+}
+
+.botao:hover{
+    background-color: #470000;
+}  
+
+.text{
+    margin-top: 1.2rem;
+    font-family: "Raleway", sans-serif;
+    color: #111111;
+    width: 25rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.link{
+    color: #750000;
+    text-decoration: none;
+}
