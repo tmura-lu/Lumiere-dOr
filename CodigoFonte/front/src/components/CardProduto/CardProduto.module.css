@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.container{
+    width: 15rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover{
+    box-shadow: 0 0 0 1px black;
+}
+
+.imagem{
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.nome{
+    font-family: "Kaisei Decol", serif;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.descricaoBreve{
+    font-family: "Lora", serif;
+    font-size: 12px;
+}
+
+.valor{
+    font-family: "Lora", serif;
+    color: #111111;
+}
+
+.botao{
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container:hover .botao{
+    background-color: #111111;
+}
+
+
