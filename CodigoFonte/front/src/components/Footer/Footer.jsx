@@ -14,18 +14,18 @@ function Footer(){
             <h1 className={styles.logoFooter}>Lumière d'Or</h1>
 
             <div style={{marginRight: '6rem'}}>
-                <h2>Explorar</h2>
+                <h2 className={styles.subtitulo}>Explorar</h2>
 
                 <Link className={styles.explorar}>Início</Link>
                 <Link className={styles.explorar}>Carrinho</Link>
             </div>
 
             <div style={{marginRight: '1rem'}}>
-                <h2>Contato</h2>
+                <h2 className={styles.subtitulo}>Contato</h2>
 
-                <p><CiMail size={30} style={{ marginRight: '.5rem' }} />email@email.com</p>
-                <p><IoCallOutline size={30} style={{ marginRight: '.5rem' }} />99 99999-9999</p>
-                <p><FiMapPin size={30} style={{ marginRight: '.5rem' }} />endereco</p>
+                <p className={styles.texto}><CiMail size={30} style={{marginRight: '.5rem'}}/>email@email.com</p>
+                <p className={styles.texto}><IoCallOutline size={30} style={{marginRight: '.5rem'}}/>99 99999-9999</p>
+                <p className={styles.texto}><FiMapPin size={30} style={{marginRight: '.5rem'}}/>endereco</p>
 
                 <div className={styles.socialMediaIcons}>
                     <FaInstagram size={40} style={{color: '#FFFAFA'}} />
