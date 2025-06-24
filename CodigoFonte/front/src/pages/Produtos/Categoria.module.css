@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+.mainContent{
+    min-height: calc(100vh - 26rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerProdutos{
+    display: flex;
+    width: 66rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.titulo{
+    font-family: "Kaisei Decol", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #111111;
+    margin: 2rem 0;
+}
