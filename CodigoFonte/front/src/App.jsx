@@ -6,6 +6,7 @@ import LoginAdm from './pages/LoginAdm/LoginAdm.jsx';
 import Categoria from './pages/Produtos/Categoria.jsx';
 import Carrinho from './pages/Carrinho/Carrinho.jsx';
 import DadosUsuario from './pages/DadosUsuario/DadosUsuario.jsx'
+import PedidoUser from './pages/PedidoUser/PedidoUser.jsx'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/produtos/:nomeCategoria" element={<Categoria/>}/>
             <Route path="/carrinho" element={<Carrinho/>}/>
             <Route path="/dados-usuario" element={<DadosUsuario/>}/>
+            <Route path="/pedido" element={<PedidoUser/>}/>
         </Routes>
     </Router>
   )
