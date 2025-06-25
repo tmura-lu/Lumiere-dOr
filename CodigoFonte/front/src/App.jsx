@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
-import Home from './pages/Home/Home.jsx'
+import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import DetalhesProduto from './pages/DetalhesProduto/DetalhesProduto.jsx';
-import LoginAdm from './pages/LoginAdm/LoginAdm.jsx'
+import LoginAdm from './pages/LoginAdm/LoginAdm.jsx';
 import Categoria from './pages/Produtos/Categoria.jsx';
-import Carrinho from './pages/Carrinho/Carrinho.jsx'
+import Carrinho from './pages/Carrinho/Carrinho.jsx';
+import DadosUsuario from './pages/DadosUsuario/DadosUsuario.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/adm" element={<LoginAdm/>}/>
             <Route path="/produtos/:nomeCategoria" element={<Categoria/>}/>
             <Route path="/carrinho" element={<Carrinho/>}/>
+            <Route path="/dados-usuario" element={<DadosUsuario/>}/>
         </Routes>
     </Router>
   )
