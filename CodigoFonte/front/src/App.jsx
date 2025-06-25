@@ -4,6 +4,7 @@ import Login from './pages/Login/Login.jsx';
 import DetalhesProduto from './pages/DetalhesProduto/DetalhesProduto.jsx';
 import LoginAdm from './pages/LoginAdm/LoginAdm.jsx'
 import Categoria from './pages/Produtos/Categoria.jsx';
+import Carrinho from './pages/Carrinho/Carrinho.jsx'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/produto" element={<DetalhesProduto/>}/>
             <Route path="/adm" element={<LoginAdm/>}/>
             <Route path="/produtos/:nomeCategoria" element={<Categoria/>}/>
+            <Route path="/carrinho" element={<Carrinho/>}/>
         </Routes>
     </Router>
   )
