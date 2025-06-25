@@ -23,12 +23,14 @@
     width: 90%;
     margin: 2rem auto;
     min-height: calc(100vh - 26rem);
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
+    overflow-y: auto;
 }
 
 .containerProdutos{
-    width: 43.5rem;
+    width: 40rem;
     min-height: 20rem;
     max-height: 30rem;
     border: 1px solid rgba(17, 17, 17, 0.2);
@@ -42,7 +44,7 @@
 .container2{
     align-self: center;
     border: 1px solid rgba(17, 17, 17, 0.2);
-    width: 27rem;
+    width: 15rem;
     padding: 2rem 1rem;
     border-radius: 20px;
     display: flex;
@@ -72,19 +74,19 @@
 .texto{
     color: #111111;
     font-family: "Lora", serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .valor{
     color: #111111;
     font-family: "Lora", serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .img{
-   height: 12.5rem;
-   width: 12.5rem; 
+   height: 10rem;
+   width: 10rem; 
    border-radius: 20px;
    margin-right: 2rem;
 }
@@ -106,7 +108,7 @@
     font-family: "Kaisei Decol", serif;
     font-weight: 500;
     color: #111111;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .descricao{
@@ -119,11 +121,11 @@
     font-family: "Lora", serif;
     font-weight: 500;
     color: #111111;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .container3{
-    width: 100%;
+    width: 90%;
     border: 1px solid rgba(17, 17, 17, 0.2);
     margin-top: 2rem;
     display: flex;
@@ -137,11 +139,11 @@
 .textoDestaque{
     font-family: "Lora", serif;
     color: #111;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .texto2{
     font-family: "Lora", serif;
     color: rgba(17, 17, 17, 0.8);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
