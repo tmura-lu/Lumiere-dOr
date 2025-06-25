@@ -1,0 +1,10 @@
+.botao{
+    display: flex;
+    align-items: center;
+    width: 5.2rem;
+    justify-content: space-between;
+    margin: 2rem 0 0 2rem; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
