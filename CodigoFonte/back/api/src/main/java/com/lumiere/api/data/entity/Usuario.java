@@ -1,39 +1,58 @@
-package com.lumiere.api.data.entity; // Certifique-se de que o pacote está correto
+// src/main/java/com/lumiere.api.data.entity/Usuario.java
+package com.lumiere.api.data.entity;
 
-import jakarta.persistence.Column; // Importe Column
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType; // Importe para o Carrinho
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType; // Importe EnumType
-import jakarta.persistence.Enumerated; // Importe Enumerated
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType; // Importe
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne; // Importe
 import jakarta.persistence.Table;
 import java.io.Serializable;
 
+
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuario") // Tabela "Usuario" no diagrama
 public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // Int no diagrama
 
     @Column(nullable = false)
-    private String nome;
+    private String nome; // VARCHAR no diagrama
 
     @Column(nullable = false, unique = true)
-    private String email;
+    private String email; // VARCHAR no diagrama
 
     @Column(nullable = false)
-    private String senha;
+    private String senha; // VARCHAR no diagrama (armazenará criptografada)
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) // Armazena o nome da enum (FUNCIONARIO ou CLIENTE) como String no DB
     @Column(nullable = false)
-    private TipoUsuario tipo;
+    private TipoUsuario tipo; // VARCHAR no diagrama - mantemos o enum por tipagem forte
 
+    // Removido CPF e Telefone, que eram específicos de Cliente no diagrama de herança
+
+    // Relacionamento Um-Para-Um com Carrinho
+    // Cada usuário tem (no máximo) um carrinho. Um carrinho pertence a um único usuário.
+    // `mappedBy = "usuario"` indica que a propriedade 'usuario' na entidade Carrinho é quem gerencia o relacionamento.
+    // `cascade = CascadeType.ALL` e `orphanRemoval = true` para gerenciar o ciclo de vida do carrinho junto com o usuário.
+    @JsonIgnore
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Carrinho carrinho;
+
+
+    // Construtor padrão (necessário para JPA)
     public Usuario() {
     }
 
+    // Construtor com campos
     public Usuario(String nome, String email, String senha, TipoUsuario tipo) {
         this.nome = nome;
         this.email = email;
@@ -82,12 +101,25 @@ public class Usuario implements Serializable {
         this.tipo = tipo;
     }
 
-    public String getDescricao() {
+    public Carrinho getCarrinho() {
+        return carrinho;
+    }
+
+    // Ao setar o carrinho, também garante a consistência do lado do carrinho
+    public void setCarrinho(Carrinho carrinho) {
+        this.carrinho = carrinho;
+        if (carrinho != null) {
+            carrinho.setUsuario(this);
+        }
+    }
+
+    @Override
+    public String toString() {
         return "Usuario{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
-                ", tipo=" + tipo + // Não imprima a senha no toString por segurança!
+                ", tipo=" + tipo +
                 '}';
     }
 }
