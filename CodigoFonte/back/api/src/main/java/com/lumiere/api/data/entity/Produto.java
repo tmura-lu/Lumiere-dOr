@@ -1,6 +1,7 @@
 // src/main/java/com/lumiere.api.data.entity/Produto.java
 package com.lumiere.api.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name = "produto") // Tabela "Produto" no diagrama
 public class Produto implements Serializable {

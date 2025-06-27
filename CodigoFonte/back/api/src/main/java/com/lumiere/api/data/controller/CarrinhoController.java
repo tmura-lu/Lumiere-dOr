@@ -1,21 +1,21 @@
-// src/main/java/com/lumiere/api/data/controller/CarrinhoController.java
+// src/main/java/com/lumiere.api.data.controller/CarrinhoController.java
 package com.lumiere.api.data.controller;
 
 import com.lumiere.api.data.entity.Carrinho;
-import com.lumiere.api.data.service.CarrinhoService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lumiere.api.data.service.CarrinhoService; // Verifica se este import está correto para o seu pacote!
+import org.springframework.beans.factory.annotation.Autowired; // Verifique o import de Autowired
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal; // Importe
-import java.util.Collections; // Importe, útil para respostas de erro
+import java.math.BigDecimal;
+import java.util.Collections;
 
 @RestController
 @RequestMapping("/carrinhos")
 public class CarrinhoController {
 
-    @Autowired
+    @Autowired // Corrigido de @Autowireda para @Autowired
     private CarrinhoService carrinhoService;
 
     // Endpoint para obter o carrinho de um usuário
@@ -37,8 +37,9 @@ public class CarrinhoController {
     @PostMapping("/{usuarioId}/adicionar")
     public ResponseEntity<?> adicionarItem(
             @PathVariable Long usuarioId,
-            @RequestBody ItemAdicionarRemoverRequest request) { // Usaremos uma classe Request para o body
+            @RequestBody ItemAdicionarRemoverRequest request) {
         try {
+            // Chama o método no service. O service espera 'quantidade'
             Carrinho carrinhoAtualizado = carrinhoService.adicionarItemAoCarrinho(
                     usuarioId, request.getProdutoId(), request.getQuantidade());
             return ResponseEntity.ok(carrinhoAtualizado);
@@ -59,8 +60,10 @@ public class CarrinhoController {
             @PathVariable Long usuarioId,
             @RequestBody ItemAdicionarRemoverRequest request) {
         try {
+            // O service espera 'quantidadeRemover' no método 'removerItemDoCarrinho'.
+            // A classe ItemAdicionarRemoverRequest precisa ter um getter para 'quantidadeRemover'.
             Carrinho carrinhoAtualizado = carrinhoService.removerItemDoCarrinho(
-                    usuarioId, request.getProdutoId(), request.getQuantidade());
+                    usuarioId, request.getProdutoId(), request.getQuantidade()); // <--- Corrigido para request.getQuantidade()
             return ResponseEntity.ok(carrinhoAtualizado);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest()
@@ -77,7 +80,7 @@ public class CarrinhoController {
     public ResponseEntity<?> esvaziarCarrinho(@PathVariable Long usuarioId) {
         try {
             Carrinho carrinhoEsvaziado = carrinhoService.esvaziarCarrinho(usuarioId);
-            return ResponseEntity.ok(carrinhoEsvaziado); // Retorna o carrinho agora vazio de itens
+            return ResponseEntity.ok(carrinhoEsvaziado);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Collections.singletonMap("error", e.getMessage()));
@@ -90,7 +93,7 @@ public class CarrinhoController {
     public ResponseEntity<?> getValorTotalCarrinho(@PathVariable Long carrinhoId) {
         try {
             BigDecimal total = carrinhoService.calcularTotalCarrinho(carrinhoId);
-            return ResponseEntity.ok(Collections.singletonMap("total", total)); // Retorna um JSON com o total
+            return ResponseEntity.ok(Collections.singletonMap("total", total));
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(Collections.singletonMap("error", e.getMessage()));
@@ -98,9 +101,11 @@ public class CarrinhoController {
     }
 
     // Classe interna para o corpo da requisição de adicionar/remover item
+    // Esta classe deve ser capaz de mapear tanto "quantidade" quanto "quantidadeRemover"
+    // Dependendo de qual campo você usa no seu JSON de entrada.
     static class ItemAdicionarRemoverRequest {
         private Long produtoId;
-        private Integer quantidade;
+        private Integer quantidade; // Usado para 'adicionar' e 'remover'
 
         public Long getProdutoId() {
             return produtoId;
@@ -110,12 +115,23 @@ public class CarrinhoController {
             this.produtoId = produtoId;
         }
 
-        public Integer getQuantidade() {
+        public Integer getQuantidade() { // Getter para o campo 'quantidade'
             return quantidade;
         }
 
-        public void setQuantidade(Integer quantidade) {
+        public void setQuantidade(Integer quantidade) { // Setter para o campo 'quantidade'
             this.quantidade = quantidade;
         }
+
+        // Se você decidiu usar 'quantidadeRemover' no JSON e no Service, adicione isto:
+        /*
+        private Integer quantidadeRemover;
+        public Integer getQuantidadeRemover() {
+            return quantidadeRemover;
+        }
+        public void setQuantidadeRemover(Integer quantidadeRemover) {
+            this.quantidadeRemover = quantidadeRemover;
+        }
+        */
     }
 }
