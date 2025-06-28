@@ -69,7 +69,7 @@ export default function DetalhesProduto() {
           <h1 className={styles.titulo}>{produto.nome}</h1>
           <p className={styles.descricao}>{produto.descricao}</p>
           <p className={styles.valor}>R$ {produto.preco}</p>
-          <button className={styles.botao} onClick={handleAdicionarAoCarrinho}>
+          <button className={styles.botao} onClick={handleAdicionarAoCarrinho} data-cy="adicionar-ao-carrinho">
             Adicionar ao carrinho
           </button>
         </div>

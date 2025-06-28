@@ -58,6 +58,7 @@ export default function Carrinho() {
                 const resTotal = await fetch(`http://localhost:8080/carrinhos/${carrinhoAtualizado.id}/total`);
                 const dataTotal = await resTotal.json();
                 setTotal(dataTotal.total);
+                alert("Item removido com sucesso!");
             } else {
                 const err = await res.json();
                 alert(err.error || "Erro ao remover item");
@@ -93,7 +94,7 @@ export default function Carrinho() {
                                         <p className={styles.valorProduto}>R$ {item.produto.preco.toFixed(2)}</p>
                                         <p className={styles.descricao}>Qtd: {item.quantidade}</p>
                                     </div>
-                                    <button className={styles.botaoRemover} onClick={() => removerItem(item.produto.id)}>Remover</button>
+                                    <button className={styles.botaoRemover} onClick={() => removerItem(item.produto.id)} data-cy="botao-remover">Remover</button>
                                 </div>
                             ))
                         )}
