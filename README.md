@@ -35,9 +35,13 @@ Lumiere-dOr/
 |   |   |   |-- components/ # Componentes React reutilizáveis
 |   |   |-- README.md       # Explicações sobre o front-end
 |   |-- back/
-|   |   |-- A DEFINIR
+|   |   |-- src/
+|   |   |   |-- main/       # Classes da API e todas as funcionalidades
+|   |   |   |-- test/       # Códigos de teste da API
+|   |   |-- pom.xml         # Dependências 
 |-- README.md               # Visão geral sobre o projeto
 |-- CONTRIBUTING.md         # Regras e padrões do uso do git
+
 ```
 
 ## Instalação
