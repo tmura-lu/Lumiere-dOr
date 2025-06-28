@@ -34,6 +34,7 @@ Lumiere-dOr/
 |   |   |   |-- assets/     # Ícones, fontes, imagens internas, etc.
 |   |   |   |-- components/ # Componentes React reutilizáveis
 |   |   |-- README.md       # Explicações sobre o front-end
+|   |   |-- cypress/        # Pasta contendo os arquivos dos testes de Validação
 |   |-- back/
 |   |   |-- src/
 |   |   |   |-- main/       # Classes da API e todas as funcionalidades
