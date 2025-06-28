@@ -23,7 +23,7 @@ const CssTextField = styled(OutlinedInput)({
         }
 });  
 
-function PasswordInput() {
+function PasswordInput({ value, onChange }) {
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -41,6 +41,8 @@ function PasswordInput() {
         sx={{marginTop:".5rem"}}
           id="outlined-adornment-password"
           type={showPassword ? 'text' : 'password'}
+          value={value}
+          onChange={onChange}
           endAdornment={
             <InputAdornment position="end">
               <IconButton

@@ -52,6 +52,7 @@
 }
 
 .botao{
+    border: none;
     display: block;
     width: 100%;
     background-color: #111111;
@@ -65,6 +66,7 @@
     font-family: "Lora", serif;
     letter-spacing: 1px;
     transition: background-color 0.3s ease-in;
+    font-size: 1.2rem;
 }
 
 .botao:hover{

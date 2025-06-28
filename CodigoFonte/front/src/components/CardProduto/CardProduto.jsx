@@ -8,7 +8,7 @@ export default function CardProduto({produto}) {
         <p className={styles.nome}>{produto.nome}</p>
         <p className={styles.descricaoBreve}>{produto.descricao}</p>
         <p className={styles.valor}>R$ {produto.preco.toFixed(2)}</p>
-        <Link className={styles.botao}>comprar</Link>
+        <Link to={`/produto/${produto.id}`} className={styles.botao}>comprar</Link>
     </div>
   )
 }

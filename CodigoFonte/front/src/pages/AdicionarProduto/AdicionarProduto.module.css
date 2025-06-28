@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container{
+    display: flex;
+    font-family: "Raleway", serif;
+}
+
+.titulo{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: 10%;
+    width: 20rem;
+}
+
+.mainContent{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: calc(100vh - 26rem);
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
+.containerCampos{
+    width: 80%;
+    flex: 1;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 1rem;
+}
+
+.btnCadastrar{
+    font-family: "Raleway", serif;
+    border: none;
+    width: 12.5rem;
+    height: 3rem;
+    background-color: #111111;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius:10px;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease-in;
+    font-size: 1rem;
+}
+
+.btnCadastrar:hover{
+    background-color: black;
+}
+
+.btnCancelar{
+    width: 12.5rem;
+    height: 3rem;
+    background-color: #D9D9D9;
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease-in;
+}
+
+.btnCancelar:hover{
+    background-color: #969696;
+}

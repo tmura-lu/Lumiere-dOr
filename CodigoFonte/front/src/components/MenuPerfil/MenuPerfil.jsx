@@ -1,9 +1,16 @@
 import styles from './MenuPerfil.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
-export default function MenuPerfil(){
-    return(
+export default function MenuPerfil() {
+    const navigate = useNavigate();
+
+    function handleLogout() {
+        localStorage.removeItem('usuario');  // Remove os dados do usuário
+        navigate('/login');                  // Redireciona para a tela de login
+    }
+
+    return (
         <div className={styles.container}>
             <p className={styles.titulo}>Opções</p>
 
@@ -13,7 +20,7 @@ export default function MenuPerfil(){
                 <Link className={styles.link}>Pedidos</Link>
             </div>
 
-            <Link className={styles.botao}>sair</Link>
+            <button onClick={handleLogout} className={styles.botao}>Sair</button>
         </div>
     )
 }

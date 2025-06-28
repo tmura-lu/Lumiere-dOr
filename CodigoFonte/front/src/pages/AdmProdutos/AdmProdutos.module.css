@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container{
+    display: flex;
+}
+
+.mainContent{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.titulo{
+    text-transform: uppercase;
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.containerProdutos{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 2rem auto;
+    gap: 2rem;
+    flex: 1;
+    overflow-x: auto;
+    padding: .5rem;
+}
+
+.msgVazia{
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+.botaoAdicionar{
+    background-color: #DCDCDC;
+    width: 15rem;
+    padding: .5rem 0;
+    align-self: end;
+    text-align: center;
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-right: 10%;
+    text-decoration: none;
+    transition: background-color .3s ease-in;
+}
+
+.botaoAdicionar:hover{
+    background-color: #969696;
+}
