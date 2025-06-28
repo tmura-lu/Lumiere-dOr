@@ -41,7 +41,7 @@ function Home() {
 
                     <p className={styles.paragrafoSecao}>Precisão com personalidade. Relógios que transformam o tempo em elegância.</p>
 
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
+                    <Link to="/categoria/Relógios" className={styles.botaoRedirecionar}>Conheça a coleção</Link>
                 </motion.div>
                 
                 <motion.div 
@@ -60,7 +60,7 @@ function Home() {
 
                         <p className={styles.paragrafoSecao}>Promessas eternas com design atemporal. Para quem busca mais que um símbolo, uma obra de arte.</p>
 
-                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                        <Link to="/categoria/Alianças" className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
                     </div>
 
                 </motion.div>
@@ -82,7 +82,7 @@ function Home() {
 
                         <p className={styles.paragrafoSecao}>Estilo que conecta histórias. Correntes marcantes para quem não passa desapercebido.</p>
 
-                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                        <Link to="/categoria/Correntes" className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
                     </div>
                 </motion.div>
 
@@ -99,7 +99,7 @@ function Home() {
 
                     <p className={styles.paragrafoSecao}>Seu olhar, nossa moldura. Óculos que refletem personalidade, confiança e visão de futuro</p>
 
-                    <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>
+                    <Link to="/categoria/Óculos" className={styles.botaoRedirecionar}>Conheça a coleção</Link>
                 </motion.div>
 
                 <motion.div 
@@ -118,7 +118,7 @@ function Home() {
 
                         <p className={styles.paragrafoSecao}>Pequenos toques, grandes impressões. Brincos que iluminam cada expressão com charme e sofisticação.</p>
 
-                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                        <Link to="/categoria/Brincos" className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
                     </div>
 
                 </motion.div>
@@ -139,7 +139,7 @@ function Home() {
 
                         <p className={styles.paragrafoSecao}>Detalhes que revelam quem você é. Pulseiras feitas para complementar o seu estilo com leveza e atitude.</p>
 
-                        <Link className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
+                        <Link to="/categoria/Pulseiras" className={styles.botaoRedirecionar}>Conheça a coleção</Link>                    
                     </div>
                 </motion.div>
             </div>

@@ -8,6 +8,7 @@ import Carrinho from './pages/Carrinho/Carrinho.jsx';
 import DadosUsuario from './pages/DadosUsuario/DadosUsuario.jsx'
 import PedidoUser from './pages/PedidoUser/PedidoUser.jsx'
 import PedidoAdm from './pages/PedidoAdm/PedidoAdm.jsx';
+import Enderecos from './pages/Endercos/Enderecos.jsx';
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
             <Route path="/registro" element={<Login/>}/>
             <Route path="/produto" element={<DetalhesProduto/>}/>
             <Route path="/adm" element={<LoginAdm/>}/>
-            <Route path="/produtos/:nomeCategoria" element={<Categoria/>}/>
+            <Route path="/categoria/:nomeCategoria" element={<Categoria/>}/>
             <Route path="/carrinho" element={<Carrinho/>}/>
             <Route path="/dados-usuario" element={<DadosUsuario/>}/>
             <Route path="/pedido" element={<PedidoUser/>}/>
             <Route path="/pedido-adm" element={<PedidoAdm/>}/>
+            <Route path="/enderecos" element={<Enderecos/>}/>
         </Routes>
     </Router>
   )
