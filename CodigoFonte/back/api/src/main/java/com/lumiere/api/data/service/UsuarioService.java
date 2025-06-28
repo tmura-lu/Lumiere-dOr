@@ -60,4 +60,8 @@ public class UsuarioService {
     public boolean verificarSenha(String senhaCrua, String senhaCriptografada) {
         return bCryptPasswordEncoder.matches(senhaCrua, senhaCriptografada);
     }
+
+    public Optional<Usuario> buscarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
 }
