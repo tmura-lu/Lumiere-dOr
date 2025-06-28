@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.container {
+    width: 15rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px black;
+}
+
+.imagem {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.nome {
+    font-family: "Kaisei Decol", serif;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.descricaoBreve {
+    font-family: "Lora", serif;
+    font-size: 12px;
+}
+
+.valor {
+    font-family: "Lora", serif;
+    color: #111111;
+}
+
+.botao {
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #111111;
+}
+
+.botao:last-child {
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-family: "Lora", serif;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.confirmModal {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    background: #111;
+    padding: 3rem;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-family: "Lora", serif;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmModal button {
+    margin: 1rem;
+    background-color: #d9d9d9;
+    border: none;
+    font-family: "Lora", serif;
+    color: #111111;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}

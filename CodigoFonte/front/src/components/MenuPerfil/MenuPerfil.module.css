@@ -42,6 +42,8 @@
 }
 
 .botao{
+    cursor: pointer;
+    border: none;
     background-color: #111111;
     width: 100%;
     text-align: center;

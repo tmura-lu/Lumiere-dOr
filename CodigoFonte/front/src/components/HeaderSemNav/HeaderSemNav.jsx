@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function HeaderSemNav() {
   return (
     <div className={styles.container}>
-        <Link className={styles.titulo}>Lumière d'Or</Link>
+        <Link to="/" className={styles.titulo}>Lumière d'Or</Link>
     </div>
   )
 }

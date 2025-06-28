@@ -4,7 +4,7 @@ import { FiShoppingBag } from "react-icons/fi";
 
 function BotaoCarrinho() {
   return (
-    <Link className={styles.icon}><FiShoppingBag size={40}/></Link>
+    <Link to="/carrinho" className={styles.icon}><FiShoppingBag size={40}/></Link>
   )
 }
 

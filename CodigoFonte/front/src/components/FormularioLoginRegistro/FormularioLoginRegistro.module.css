@@ -28,6 +28,8 @@
 }
 
 .botao{
+    border: none;
+    cursor: pointer;
     margin-top: 1.2rem;
     background-color: #750000;
     width: 100%;

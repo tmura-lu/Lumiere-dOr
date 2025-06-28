@@ -119,3 +119,30 @@
     color: #111111;
     font-size: 1.5rem;
 }
+
+.vazio{
+    color: #111111;
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    display: flex;
+    height: 20rem;
+    align-items: center;
+}
+
+.botaoRemover{
+    cursor: pointer;
+    border: none;
+    background-color: red;
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
+    margin-left: 4rem;
+    transition: background-color .3s ease-in;
+}
+
+.botaoRemover:hover{
+    background-color: rgb(145, 1, 1);
+}
