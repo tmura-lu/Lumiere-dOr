@@ -1,7 +1,7 @@
 package com.lumiere.api.data.controller;
 
-import com.lumiere.api.data.entity.Usuario; // Mudança aqui: de Cliente para Usuario
-import com.lumiere.api.data.service.UsuarioService; // Mudança aqui: de ClienteService para UsuarioService
+import com.lumiere.api.data.entity.Usuario;
+import com.lumiere.api.data.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
