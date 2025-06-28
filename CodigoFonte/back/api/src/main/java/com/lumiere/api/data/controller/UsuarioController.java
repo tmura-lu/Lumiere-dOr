@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.MediaType;
 
 import java.util.List;
 
@@ -54,5 +55,31 @@ public class UsuarioController {
     public ResponseEntity<Void> deletarUsuario(@PathVariable Long id) {
         usuarioService.deletar(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping(value = "/login", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
+        return usuarioService.buscarPorEmail(loginRequest.getEmail())
+                .map(usuario -> {
+                    boolean senhaValida = usuarioService.verificarSenha(loginRequest.getSenha(), usuario.getSenha());
+                    if (senhaValida) {
+                        // Pode retornar dados do usuário ou um token JWT, aqui vamos retornar o usuário simples
+                        return ResponseEntity.ok(usuario);
+                    } else {
+                        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Senha inválida");
+                    }
+                })
+                .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuário não encontrado"));
+    }
+
+    public static class LoginRequest {
+        private String email;
+        private String senha;
+
+        public String getEmail() { return email; }
+        public void setEmail(String email) { this.email = email; }
+
+        public String getSenha() { return senha; }
+        public void setSenha(String senha) { this.senha = senha; }
     }
 }
