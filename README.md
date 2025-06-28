@@ -99,11 +99,4 @@ O front-end estará disponível em [http://localhost:5173](http://localhost:5173
     mvnw.cmd spring-boot:run
     ```
 
-3. Alternativamente, para gerar o arquivo `.jar` e executar:
-
-    ```bash
-    mvn clean package
-    java -jar target/seu-projeto.jar
-    ```
-
-4. A API estará disponível em [http://localhost:8080](http://localhost:8080).
+3. A API estará disponível em [http://localhost:8080](http://localhost:8080).
