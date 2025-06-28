@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+.container{
+    height: 8rem;
+    width: 100%;
+    background-color: #FFFAFA;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+h1{
+    text-align: center;
+    margin: 0 auto ;
+}
+
+.titulo{
+    text-decoration: none;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #111111;
+    margin-left: 5rem;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 60%;
+    margin: .8rem auto;
+    font-family: "Kaisei Decol", serif;
+}
+
+.link{
+    color: #111111;
+    text-decoration: none;
+    transition-duration: .3s;
+    transition-property: color;
+    text-transform: uppercase;
+}
+
+.link:hover{
+    color: #750000;
+}
+
+.icon {
+  color: #111111;
+  font-size: 1.8rem; /* ou 24px */
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #750000; /* por exemplo, dourado */
+}
+
+.containerTitleIcon{
+    display: flex;
+}
+
+.containerIcon{
+    display: flex;
+    width: 5rem;
+    justify-content: space-around;
+    align-items: center;
+}

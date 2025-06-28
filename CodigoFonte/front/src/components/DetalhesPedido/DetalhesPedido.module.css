@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.titulo{
+    text-transform: uppercase;
+    font-family: "Raleway", serif;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.total{
+    color: #111111;
+    font-family: "Lora", serif;
+}
+
+.mainContent{
+    display: flex;
+    width: 90%;
+    margin: 2rem auto;
+    min-height: calc(100vh - 26rem);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.containerProdutos{
+    width: 40rem;
+    min-height: 20rem;
+    max-height: 30rem;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2{
+    align-self: center;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    width: 15rem;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.botao{
+    width: 100%;
+    background-color: #111111;
+    padding: .5rem 0;
+    text-align: center;
+    color: #FFFAFA;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Lora", serif;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    transition: background-color .3s ease-in;
+}
+
+.botao:hover{
+    background-color: black;
+}
+
+.texto{
+    color: #111111;
+    font-family: "Lora", serif;
+    font-size: 1rem;
+}
+
+.valor{
+    color: #111111;
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.img{
+   height: 10rem;
+   width: 10rem; 
+   border-radius: 20px;
+   margin-right: 2rem;
+}
+
+.produto{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    width: 96%;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2) ;
+}
+
+.produto:last-child{
+    border-bottom: none;
+}
+
+.nome{
+    text-transform: uppercase;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1.2rem;
+}
+
+.descricao{
+    font-family: "Lora", serif;
+    margin: 1rem 0;
+}
+
+.valorProduto{
+    text-transform: uppercase;
+    font-family: "Lora", serif;
+    font-weight: 500;
+    color: #111111;
+    font-size: 1.2rem;
+}
+
+.container3{
+    width: 90%;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 4.5rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.textoDestaque{
+    font-family: "Lora", serif;
+    color: #111;
+    font-size: 1.2rem;
+}
+
+.texto2{
+    font-family: "Lora", serif;
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 1rem;
+}
