@@ -46,6 +46,64 @@ Lumiere-dOr/
 
 ## Instalação
 
-```
-A DEFINIR
-```
+### Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado no seu ambiente:
+
+- [Node.js](https://nodejs.org/) (recomendado v16 ou superior)  
+- [Yarn](https://yarnpkg.com/) ou npm (gerenciador de pacotes para Node.js)  
+- [Java JDK 17+](https://adoptium.net/) (ou versão compatível com seu projeto Spring)  
+- [Maven](https://maven.apache.org/) (para gerenciar dependências e build do backend)
+
+### Front-End (React com Vite)
+
+1. Navegue até a pasta do front-end:
+
+    ```bash
+    cd CodigoFonte/front
+    ```
+
+2. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+3. Rode a aplicação em modo de desenvolvimento na porta 5173:
+
+    ```bash
+    npm run dev
+    ```
+
+O front-end estará disponível em [http://localhost:5173](http://localhost:5173).
+
+### Back-End (Java Spring)
+
+1. Navegue até a pasta do back-end:
+
+    ```bash
+    cd CodigoFonte/back
+    ```
+
+2. Compile e rode a aplicação Spring com Maven:
+
+    No Linux/macOS:
+
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+
+    No Windows:
+
+    ```bash
+    mvnw.cmd spring-boot:run
+    ```
+
+3. Alternativamente, para gerar o arquivo `.jar` e executar:
+
+    ```bash
+    mvn clean package
+    java -jar target/seu-projeto.jar
+    ```
+
+4. A API estará disponível em [http://localhost:8080](http://localhost:8080).
