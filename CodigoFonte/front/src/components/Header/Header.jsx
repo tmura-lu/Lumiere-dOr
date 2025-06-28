@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className={styles.container}>
         <div className={styles.containerTitleIcon}>
-            <h1><Link className={styles.titulo}>Lumière d'Or</Link></h1>
+            <h1><Link to="/" className={styles.titulo}>Lumière d'Or</Link></h1>
             
             <div className={styles.containerIcon}>
                 <Link className={styles.icon}><LuUser /></Link>
@@ -16,12 +16,12 @@ function Header() {
         </div>
 
         <ul>
-            <li><Link className={styles.link}>Alianças</Link></li>
-            <li><Link className={styles.link}>Correntes</Link></li>
-            <li><Link className={styles.link}>Relógios</Link></li>
-            <li><Link className={styles.link}>Pulseiras</Link></li>
-            <li><Link className={styles.link}>Óculos</Link></li>
-            <li><Link className={styles.link}>Brincos</Link></li>
+            <li><Link to="/categoria/Alianças" className={styles.link}>Alianças</Link></li>
+            <li><Link to="/categoria/Correntes" className={styles.link}>Correntes</Link></li>
+            <li><Link to="/categoria/Relógios" className={styles.link}>Relógios</Link></li>
+            <li><Link to="/categoria/Pulseiras" className={styles.link}>Pulseiras</Link></li>
+            <li><Link to="/categoria/Óculos" className={styles.link}>Óculos</Link></li>
+            <li><Link to="/categoria/Brincos" className={styles.link}>Brincos</Link></li>
         </ul>
     </div>
   )
